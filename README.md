@@ -9,6 +9,14 @@ docker run -t --rm brian2-benchmark
 
 # To debug
 docker run -it --rm brian2-benchmark /bin/bash
+
+# Format results in Markdown
+docker run -t --rm brian2-benchmark > test_cpu1.txt
+docker run -t --rm brian2-benchmark > test_cpu2.txt
+# ...
+docker run -t --rm brian2-benchmark > test_cpuN.txt
+
+ruby format_results.rb test_cpu1.txt test_cpu2.txt ... test_cpuN.txt
 ```
 
 Brian-2 benchmarks are taken from the [ModelDB record #222725](https://senselab.med.yale.edu/ModelDB/showmodel?model=222725#tabs-1) and associated with the paper [Software for Brain Network Simulations: A Comparative Study](https://www.frontiersin.org/articles/10.3389/fninf.2017.00046/full)
