@@ -9,13 +9,15 @@ RUN ( \
       python3 \
       python3-pip \
       libgsl-dev \
-  && pip3 install \
-      brian2 \
   && mkdir /workspace \
   )
 
 WORKDIR /workspace
 VOLUME /workspace
+
+COPY requirements.txt /workspace
+RUN pip3 install -r requirements.txt
+
 COPY benchmark/. /workspace
 
 CMD [ "./run.sh" ]
