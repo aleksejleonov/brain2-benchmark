@@ -86,3 +86,4 @@ s_mon = s_mon[np.where(s_mon[:,0]<200)]
 #plot(s_mon[:,0], s_mon[:,1]+Ne+Ni+200, '.b')
 
 #show()
+device.delete(force=True)

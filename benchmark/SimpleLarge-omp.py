@@ -4,7 +4,7 @@ import numpy as np
 #matplotlib.rcParams["savefig.directory"] = ""
 from brian2 import *
 
-set_device('cpp_standalone', directory="SimpleLarge" )
+set_device('cpp_standalone', directory="SimpleLarge-omp" )
 prefs.devices.cpp_standalone.openmp_threads = os.cpu_count()
 
 startbuild=time.time()
@@ -85,3 +85,4 @@ s_mon = s_mon[np.where(s_mon[:,0]<200)]
 #plot(s_mon[:,0], s_mon[:,1]+Ne+Ni+200, '.b')
 
 #show()
+device.delete(force=True)

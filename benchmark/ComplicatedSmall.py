@@ -56,7 +56,7 @@ beta_n = .5*exp((10*mV-v+VT)/(40*mV))/ms : Hz
 
 ''')
 defaultclock.dt = 0.05*ms
-P = NeuronGroup(400, model=eqs, threshold='v>25*mV', method='rk4') #method='exponential_euler') 
+P = NeuronGroup(400, model=eqs, threshold='v>25*mV', refractory='v>-25*mV', method='rk4') #method='exponential_euler') 
 
 Ci = Synapses(P, P, on_pre='''
                       gi1+=wi
@@ -93,3 +93,4 @@ print("Time step         : %.2f ms"%(defaultclock.dt*1000.))
 # plot(s_mon.t/ms, s_mon.i, '.k',ms=9)
 # plt.xlim(0.,500.)
 # show()
+device.delete(force=True)
