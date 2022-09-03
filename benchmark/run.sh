@@ -19,6 +19,7 @@ do
 
   for i in {0..9}
   do
+    rm -fR ${benchmark_file%%.py} ~/.cython
     python3 $benchmark_file
     echo ""
   done
