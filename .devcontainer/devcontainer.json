@@ -1,43 +1,62 @@
-// If you want to run as a non-root user in the container, see docker-compose.yml.
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.245.2/containers/python-3
 {
-  "name": "brian2-benchmark",
+	"name": "Python 3",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": "..",
+		"args": {
+			// Update 'VARIANT' to pick a Python version: 3, 3.10, 3.9, 3.8, 3.7, 3.6
+			// Append -bullseye or -buster to pin to an OS version.
+			// Use -bullseye variants on local on arm64/Apple Silicon.
+			"VARIANT": "3.10-bullseye",
+			// Options
+			"NODE_VERSION": "none"
+		}
+	},
 
-  "build": {
-    "dockerfile": "Dockerfile",
-    "context": ".."
-  },
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Set *default* container specific settings.json values on container create.
+			"settings": {
+				"python.defaultInterpreterPath": "/usr/local/bin/python",
+				"python.linting.enabled": true,
+				"python.linting.pylintEnabled": true,
+				"python.formatting.autopep8Path": "/usr/local/py-utils/bin/autopep8",
+				"python.formatting.blackPath": "/usr/local/py-utils/bin/black",
+				"python.formatting.yapfPath": "/usr/local/py-utils/bin/yapf",
+				"python.linting.banditPath": "/usr/local/py-utils/bin/bandit",
+				"python.linting.flake8Path": "/usr/local/py-utils/bin/flake8",
+				"python.linting.mypyPath": "/usr/local/py-utils/bin/mypy",
+				"python.linting.pycodestylePath": "/usr/local/py-utils/bin/pycodestyle",
+				"python.linting.pydocstylePath": "/usr/local/py-utils/bin/pydocstyle",
+				"python.linting.pylintPath": "/usr/local/py-utils/bin/pylint",
+				// Auto-correct Python code on save.
+				"[python]": {
+					"editor.formatOnSave": true
+				}
+			},
 
-  // Basic settings config.
-  // Fine-tune inside the project with `.vscode/settings.json` file.
-  //
-  // Use 'settings' to set *default* container specific settings.json values on container create.
-  // You can edit these settings after create using File > Preferences > Settings > Remote.
-  "settings": {
-    // You could redefine this settings with .vscode/settings.json file
-    // inside workspace folder.
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"editorconfig.editorconfig"
+			]
+		}
+	},
 
-    // Colorize and highlight bracket pairs.
-    "editor.guides.bracketPairs": true,
-    "editor.bracketPairColorization.enabled": true,
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
 
-    // This will ignore your local shell user setting for Linux since shells like zsh are typically
-    // not in base container images. You can also update this to an specific shell to ensure VS Code
-    // uses the right one for terminals and tasks. For example, /bin/bash (or /bin/ash for Alpine).
-    "terminal.integrated.defaultProfile.linux": "bash",
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "pip3 install --user -r requirements.txt",
 
-    // Require to confirm exit when the terminal is active (helps a lot when accidentally Cmd-Q pressed).
-    "terminal.integrated.confirmOnExit": "hasChildProcesses"
-  },
-
-  // A command string or list of command arguments to run when the container starts (in all cases).
-  // The parameters behave exactly like postCreateCommand, but the commands execute on start rather
-  // than create. Not set by default.
-  "postStartCommand": "pip3 install -r requirements.txt",
-
-  // Add the IDs of extensions you want installed when the container is created in the array below.
-  "extensions": [
-    "ms-python.python",
-    "eamodio.gitlens",
-    "editorconfig.editorconfig"
-  ]
+	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vscode",
+	"features": {
+		"git": "os-provided"
+	}
 }
