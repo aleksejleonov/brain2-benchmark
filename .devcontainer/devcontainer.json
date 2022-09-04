@@ -1,0 +1,43 @@
+// If you want to run as a non-root user in the container, see docker-compose.yml.
+{
+  "name": "brian2-benchmark",
+
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+
+  // Basic settings config.
+  // Fine-tune inside the project with `.vscode/settings.json` file.
+  //
+  // Use 'settings' to set *default* container specific settings.json values on container create.
+  // You can edit these settings after create using File > Preferences > Settings > Remote.
+  "settings": {
+    // You could redefine this settings with .vscode/settings.json file
+    // inside workspace folder.
+
+    // Colorize and highlight bracket pairs.
+    "editor.guides.bracketPairs": true,
+    "editor.bracketPairColorization.enabled": true,
+
+    // This will ignore your local shell user setting for Linux since shells like zsh are typically
+    // not in base container images. You can also update this to an specific shell to ensure VS Code
+    // uses the right one for terminals and tasks. For example, /bin/bash (or /bin/ash for Alpine).
+    "terminal.integrated.defaultProfile.linux": "bash",
+
+    // Require to confirm exit when the terminal is active (helps a lot when accidentally Cmd-Q pressed).
+    "terminal.integrated.confirmOnExit": "hasChildProcesses"
+  },
+
+  // A command string or list of command arguments to run when the container starts (in all cases).
+  // The parameters behave exactly like postCreateCommand, but the commands execute on start rather
+  // than create. Not set by default.
+  "postStartCommand": "pip3 install -r requirements.txt",
+
+  // Add the IDs of extensions you want installed when the container is created in the array below.
+  "extensions": [
+    "ms-python.python",
+    "eamodio.gitlens",
+    "editorconfig.editorconfig"
+  ]
+}
