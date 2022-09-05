@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# exit when any command fails
+set -e
+
 echo "CPU info"
 cat /proc/cpuinfo
 
@@ -11,7 +14,8 @@ echo ""
 
 echo "Benchmark"
 echo ""
-for benchmark_file in $(ls *.py)
+cd brian2_benchmark
+for benchmark_file in SimpleLarge.py SimpleLarge-omp.py ComplicatedSmall.py ComplicatedSmall-omp.py
 do
   echo "*****************************"
   echo "Testing 10 times with $benchmark_file..."
@@ -19,7 +23,7 @@ do
 
   for i in {0..9}
   do
-    python3 $benchmark_file
+    poetry run python3 $benchmark_file
     echo ""
   done
 

@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "brian2-benchmark"
+version = "0.1.0"
+description = "Brian2 benchmark to compare different CPUs"
+license = "MIT"
+authors = ["Oleksii Leonov <mail@oleksiileonov.com>", "Ruben A. Tikidji-Hamburyan, Ph.D. <rth@r-a-r.org>"]
+readme = "README.md"
+homepage = "https://github.com/aleksejleonov/brian2-benchmark"
+repository = "https://github.com/aleksejleonov/brian2-benchmark"
+keywords = ["brian2"]
+packages = [{include = "brian2_benchmark"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Brian2 = "^2.5.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
