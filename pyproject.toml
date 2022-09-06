@@ -11,8 +11,12 @@ keywords = ["brian2"]
 packages = [{include = "brian2_benchmark"}]
 
 [tool.poetry.dependencies]
-python = "^3.10"
-Brian2 = "^2.5.1"
+python = "~3.10"
+Brian2 = "2.5.1"
+
+[tool.poetry.group.ci.dependencies]
+pre-commit = "^2.20.0"
+black = "^22.8.0"
 
 [build-system]
 requires = ["poetry-core"]
