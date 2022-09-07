@@ -15,7 +15,7 @@ echo ""
 echo "Benchmark"
 echo ""
 cd brian2_benchmark
-for benchmark_file in SimpleLarge.py SimpleLarge-omp.py ComplicatedSmall.py ComplicatedSmall-omp.py
+for benchmark_file in simple_large.py simple_large_omp.py complicated_small.py complicated_small_omp.py
 do
   echo "*****************************"
   echo "Testing 10 times with $benchmark_file..."

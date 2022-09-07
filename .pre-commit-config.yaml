@@ -37,3 +37,20 @@ repos:
       - id: poetry-check
       - id: poetry-lock
         args: ["--check", "--no-update"]
+  - repo: https://github.com/psf/black
+    rev: '22.8.0'
+    hooks:
+      - id: black
+  - repo: local
+    hooks:
+      - id: pylint
+        name: pylint
+        entry: pylint
+        language: system
+        types: [python]
+        args:
+          [
+            "-rn", # Only display messages
+            "-sn", # Don't display the score
+            "-d", "duplicate-code" # ignore duplicate code
+          ]

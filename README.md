@@ -51,7 +51,7 @@ Brian-2 benchmarks are taken from the [ModelDB record #222725](https://senselab.
 
 ### Single thread performance
 
-Test #1, 10 times: SimpleLarge.py
+Test #1, 10 times: simple_large.py
 Task | m1 | m1_max | m2
 :- | -: | -: | -:
 Building time<br>Simulation time | `16.00 s`<br>`20.17 s` | `15.72 s`<br>`19.85 s` | `13.56 s`<br>`17.34 s`
@@ -66,7 +66,7 @@ Building time<br>Simulation time | `3.14 s`<br>`0.74 s` | `3.14 s`<br>`0.71 s` |
 Building time<br>Simulation time | `3.14 s`<br>`0.73 s` | `3.15 s`<br>`0.70 s` | `2.55 s`<br>`0.56 s`
 
 
-Test #2, 10 times: ComplicatedSmall.py
+Test #2, 10 times: complicated_small.py
 Task | m1 | m1_max | m2
 :- | -: | -: | -:
 Building time<br>Simulation time | `3.53 s`<br>`8.68 s` | `3.47 s`<br>`8.61 s` | `3.06 s`<br>`7.56 s`
@@ -82,7 +82,7 @@ Building time<br>Simulation time | `0.15 s`<br>`1.01 s` | `0.15 s`<br>`1.01 s` |
 
 ### Multithread tests in OpenMP standalone mode
 
-Test #1, 10 times : SimpleLarge-omp.py
+Test #1, 10 times : simple_large_omp.py
 Task | m1 | m1_max | m2
 :- | -: | -: | -:
 Building time<br>Simulation time | `3.04 s`<br>`4.29 s` | `3.06 s`<br>`3.44 s` | `2.45 s`<br>`3.57 s`
@@ -97,7 +97,7 @@ Building time<br>Simulation time | `3.06 s`<br>`1.12 s` | `3.06 s`<br>`1.28 s` |
 Building time<br>Simulation time | `3.08 s`<br>`1.12 s` | `3.08 s`<br>`1.32 s` | `2.41 s`<br>`0.98 s`
 
 
-Test #2, 10 times: ComplicatedSmall-omp.py
+Test #2, 10 times: complicated_small_omp.py
 Task | m1 | m1_max | m2
 :- | -: | -: | -:
 Building time<br>Simulation time | `0.08 s`<br>`2.39 s` | `0.08 s`<br>`1.92 s` | `0.08 s`<br>`1.93 s`
