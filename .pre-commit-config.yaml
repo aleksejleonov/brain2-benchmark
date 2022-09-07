@@ -54,3 +54,8 @@ repos:
             "-sn", # Don't display the score
             "-d", "duplicate-code" # ignore duplicate code
           ]
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v2.37.3
+    hooks:
+      - id: pyupgrade
+        args: ["--py310-plus"]

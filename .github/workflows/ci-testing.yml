@@ -29,4 +29,4 @@ jobs:
         poetry run pre-commit install
     - name: Run pre-commit hooks
       run: |
-        SKIP=no-commit-to-branch poetry run pre-commit run --all-files
+        SKIP=no-commit-to-branch poetry run pre-commit run --all-files --show-diff-on-failure
