@@ -25,6 +25,7 @@
 				"python.linting.pylintEnabled": true,
 				"python.formatting.provider": "black",
 				"python.analysis.typeCheckingMode": "basic",
+				"python.terminal.activateEnvInCurrentTerminal": true,
 				// Auto-correct Python code on save.
 				"[python]": {
 					"editor.formatOnSave": true
