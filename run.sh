@@ -23,7 +23,7 @@ do
 
   for i in {0..9}
   do
-    poetry run python3 $benchmark_file
+    python3 $benchmark_file
     echo ""
   done
 
