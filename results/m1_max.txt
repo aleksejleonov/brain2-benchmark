@@ -97,122 +97,47 @@ CPU revision	: 0
 Benchmark
 
 *****************************
-Testing 10 times with complicated_small_omp.py...
+Testing 10 times with simple_large.py...
 
-WARNING    The NeuronGroup 'neurongroup' sets a threshold but neither a reset condition nor a refractory condition has been set. Did you forget either of those? If this was intended, set the reset argument to an empty string in order to avoid this warning. [brian2.groups.neurongroup.only_threshold]
-WARNING    OpenMP code is not yet well tested, and may be inaccurate. [brian2.devices.cpp_standalone.device.openmp]
-Building time     : 0.08 s
-Simulation time   : 1.92 s
-Time step         : 0.05 ms
+Building time     : 17.42 s
+Simulation time   : 22.58 s
+Time step         : 0.10 ms
 
-WARNING    The NeuronGroup 'neurongroup' sets a threshold but neither a reset condition nor a refractory condition has been set. Did you forget either of those? If this was intended, set the reset argument to an empty string in order to avoid this warning. [brian2.groups.neurongroup.only_threshold]
-WARNING    OpenMP code is not yet well tested, and may be inaccurate. [brian2.devices.cpp_standalone.device.openmp]
-Building time     : 0.08 s
-Simulation time   : 0.91 s
-Time step         : 0.05 ms
+Building time     : 17.38 s
+Simulation time   : 22.56 s
+Time step         : 0.10 ms
 
-WARNING    The NeuronGroup 'neurongroup' sets a threshold but neither a reset condition nor a refractory condition has been set. Did you forget either of those? If this was intended, set the reset argument to an empty string in order to avoid this warning. [brian2.groups.neurongroup.only_threshold]
-WARNING    OpenMP code is not yet well tested, and may be inaccurate. [brian2.devices.cpp_standalone.device.openmp]
-Building time     : 0.08 s
-Simulation time   : 0.92 s
-Time step         : 0.05 ms
+Building time     : 17.42 s
+Simulation time   : 22.60 s
+Time step         : 0.10 ms
 
-WARNING    The NeuronGroup 'neurongroup' sets a threshold but neither a reset condition nor a refractory condition has been set. Did you forget either of those? If this was intended, set the reset argument to an empty string in order to avoid this warning. [brian2.groups.neurongroup.only_threshold]
-WARNING    OpenMP code is not yet well tested, and may be inaccurate. [brian2.devices.cpp_standalone.device.openmp]
-Building time     : 0.08 s
-Simulation time   : 0.92 s
-Time step         : 0.05 ms
+Building time     : 17.43 s
+Simulation time   : 22.59 s
+Time step         : 0.10 ms
 
-WARNING    The NeuronGroup 'neurongroup' sets a threshold but neither a reset condition nor a refractory condition has been set. Did you forget either of those? If this was intended, set the reset argument to an empty string in order to avoid this warning. [brian2.groups.neurongroup.only_threshold]
-WARNING    OpenMP code is not yet well tested, and may be inaccurate. [brian2.devices.cpp_standalone.device.openmp]
-Building time     : 0.08 s
-Simulation time   : 0.92 s
-Time step         : 0.05 ms
+Building time     : 17.49 s
+Simulation time   : 22.62 s
+Time step         : 0.10 ms
 
-WARNING    The NeuronGroup 'neurongroup' sets a threshold but neither a reset condition nor a refractory condition has been set. Did you forget either of those? If this was intended, set the reset argument to an empty string in order to avoid this warning. [brian2.groups.neurongroup.only_threshold]
-WARNING    OpenMP code is not yet well tested, and may be inaccurate. [brian2.devices.cpp_standalone.device.openmp]
-Building time     : 0.08 s
-Simulation time   : 0.93 s
-Time step         : 0.05 ms
+Building time     : 17.53 s
+Simulation time   : 22.67 s
+Time step         : 0.10 ms
 
-WARNING    The NeuronGroup 'neurongroup' sets a threshold but neither a reset condition nor a refractory condition has been set. Did you forget either of those? If this was intended, set the reset argument to an empty string in order to avoid this warning. [brian2.groups.neurongroup.only_threshold]
-WARNING    OpenMP code is not yet well tested, and may be inaccurate. [brian2.devices.cpp_standalone.device.openmp]
-Building time     : 0.08 s
-Simulation time   : 0.93 s
-Time step         : 0.05 ms
+Building time     : 17.56 s
+Simulation time   : 22.71 s
+Time step         : 0.10 ms
 
-WARNING    The NeuronGroup 'neurongroup' sets a threshold but neither a reset condition nor a refractory condition has been set. Did you forget either of those? If this was intended, set the reset argument to an empty string in order to avoid this warning. [brian2.groups.neurongroup.only_threshold]
-WARNING    OpenMP code is not yet well tested, and may be inaccurate. [brian2.devices.cpp_standalone.device.openmp]
-Building time     : 0.08 s
-Simulation time   : 0.93 s
-Time step         : 0.05 ms
+Building time     : 17.59 s
+Simulation time   : 23.07 s
+Time step         : 0.10 ms
 
-WARNING    The NeuronGroup 'neurongroup' sets a threshold but neither a reset condition nor a refractory condition has been set. Did you forget either of those? If this was intended, set the reset argument to an empty string in order to avoid this warning. [brian2.groups.neurongroup.only_threshold]
-WARNING    OpenMP code is not yet well tested, and may be inaccurate. [brian2.devices.cpp_standalone.device.openmp]
-Building time     : 0.08 s
-Simulation time   : 0.93 s
-Time step         : 0.05 ms
+Building time     : 17.80 s
+Simulation time   : 23.17 s
+Time step         : 0.10 ms
 
-WARNING    The NeuronGroup 'neurongroup' sets a threshold but neither a reset condition nor a refractory condition has been set. Did you forget either of those? If this was intended, set the reset argument to an empty string in order to avoid this warning. [brian2.groups.neurongroup.only_threshold]
-WARNING    OpenMP code is not yet well tested, and may be inaccurate. [brian2.devices.cpp_standalone.device.openmp]
-Building time     : 0.08 s
-Simulation time   : 0.93 s
-Time step         : 0.05 ms
-
-*****************************
-
-*****************************
-Testing 10 times with complicated_small.py...
-
-WARNING    The NeuronGroup 'neurongroup' sets a threshold but neither a reset condition nor a refractory condition has been set. Did you forget either of those? If this was intended, set the reset argument to an empty string in order to avoid this warning. [brian2.groups.neurongroup.only_threshold]
-Building time     : 3.47 s
-Simulation time   : 8.61 s
-Time step         : 0.05 ms
-
-WARNING    The NeuronGroup 'neurongroup' sets a threshold but neither a reset condition nor a refractory condition has been set. Did you forget either of those? If this was intended, set the reset argument to an empty string in order to avoid this warning. [brian2.groups.neurongroup.only_threshold]
-Building time     : 0.15 s
-Simulation time   : 1.01 s
-Time step         : 0.05 ms
-
-WARNING    The NeuronGroup 'neurongroup' sets a threshold but neither a reset condition nor a refractory condition has been set. Did you forget either of those? If this was intended, set the reset argument to an empty string in order to avoid this warning. [brian2.groups.neurongroup.only_threshold]
-Building time     : 0.15 s
-Simulation time   : 1.01 s
-Time step         : 0.05 ms
-
-WARNING    The NeuronGroup 'neurongroup' sets a threshold but neither a reset condition nor a refractory condition has been set. Did you forget either of those? If this was intended, set the reset argument to an empty string in order to avoid this warning. [brian2.groups.neurongroup.only_threshold]
-Building time     : 0.15 s
-Simulation time   : 1.01 s
-Time step         : 0.05 ms
-
-WARNING    The NeuronGroup 'neurongroup' sets a threshold but neither a reset condition nor a refractory condition has been set. Did you forget either of those? If this was intended, set the reset argument to an empty string in order to avoid this warning. [brian2.groups.neurongroup.only_threshold]
-Building time     : 0.15 s
-Simulation time   : 1.01 s
-Time step         : 0.05 ms
-
-WARNING    The NeuronGroup 'neurongroup' sets a threshold but neither a reset condition nor a refractory condition has been set. Did you forget either of those? If this was intended, set the reset argument to an empty string in order to avoid this warning. [brian2.groups.neurongroup.only_threshold]
-Building time     : 0.15 s
-Simulation time   : 1.02 s
-Time step         : 0.05 ms
-
-WARNING    The NeuronGroup 'neurongroup' sets a threshold but neither a reset condition nor a refractory condition has been set. Did you forget either of those? If this was intended, set the reset argument to an empty string in order to avoid this warning. [brian2.groups.neurongroup.only_threshold]
-Building time     : 0.15 s
-Simulation time   : 1.01 s
-Time step         : 0.05 ms
-
-WARNING    The NeuronGroup 'neurongroup' sets a threshold but neither a reset condition nor a refractory condition has been set. Did you forget either of those? If this was intended, set the reset argument to an empty string in order to avoid this warning. [brian2.groups.neurongroup.only_threshold]
-Building time     : 0.15 s
-Simulation time   : 1.02 s
-Time step         : 0.05 ms
-
-WARNING    The NeuronGroup 'neurongroup' sets a threshold but neither a reset condition nor a refractory condition has been set. Did you forget either of those? If this was intended, set the reset argument to an empty string in order to avoid this warning. [brian2.groups.neurongroup.only_threshold]
-Building time     : 0.15 s
-Simulation time   : 1.00 s
-Time step         : 0.05 ms
-
-WARNING    The NeuronGroup 'neurongroup' sets a threshold but neither a reset condition nor a refractory condition has been set. Did you forget either of those? If this was intended, set the reset argument to an empty string in order to avoid this warning. [brian2.groups.neurongroup.only_threshold]
-Building time     : 0.15 s
-Simulation time   : 1.01 s
-Time step         : 0.05 ms
+Building time     : 17.78 s
+Simulation time   : 22.87 s
+Time step         : 0.10 ms
 
 *****************************
 
@@ -220,98 +145,153 @@ Time step         : 0.05 ms
 Testing 10 times with simple_large_omp.py...
 
 WARNING    OpenMP code is not yet well tested, and may be inaccurate. [brian2.devices.cpp_standalone.device.openmp]
-Building time     : 3.06 s
-Simulation time   : 3.44 s
+Building time     : 2.58 s
+Simulation time   : 3.27 s
 Time step         : 0.10 ms
 
 WARNING    OpenMP code is not yet well tested, and may be inaccurate. [brian2.devices.cpp_standalone.device.openmp]
-Building time     : 3.02 s
-Simulation time   : 1.25 s
+Building time     : 2.55 s
+Simulation time   : 3.38 s
 Time step         : 0.10 ms
 
 WARNING    OpenMP code is not yet well tested, and may be inaccurate. [brian2.devices.cpp_standalone.device.openmp]
-Building time     : 3.05 s
-Simulation time   : 1.27 s
+Building time     : 2.56 s
+Simulation time   : 3.49 s
 Time step         : 0.10 ms
 
 WARNING    OpenMP code is not yet well tested, and may be inaccurate. [brian2.devices.cpp_standalone.device.openmp]
-Building time     : 3.09 s
-Simulation time   : 1.27 s
+Building time     : 2.57 s
+Simulation time   : 3.34 s
 Time step         : 0.10 ms
 
 WARNING    OpenMP code is not yet well tested, and may be inaccurate. [brian2.devices.cpp_standalone.device.openmp]
-Building time     : 3.09 s
-Simulation time   : 1.28 s
+Building time     : 2.54 s
+Simulation time   : 3.29 s
 Time step         : 0.10 ms
 
 WARNING    OpenMP code is not yet well tested, and may be inaccurate. [brian2.devices.cpp_standalone.device.openmp]
-Building time     : 3.07 s
-Simulation time   : 1.25 s
+Building time     : 2.56 s
+Simulation time   : 3.30 s
 Time step         : 0.10 ms
 
 WARNING    OpenMP code is not yet well tested, and may be inaccurate. [brian2.devices.cpp_standalone.device.openmp]
-Building time     : 3.06 s
-Simulation time   : 1.27 s
+Building time     : 2.57 s
+Simulation time   : 3.26 s
 Time step         : 0.10 ms
 
 WARNING    OpenMP code is not yet well tested, and may be inaccurate. [brian2.devices.cpp_standalone.device.openmp]
-Building time     : 3.06 s
-Simulation time   : 1.24 s
+Building time     : 2.57 s
+Simulation time   : 3.32 s
 Time step         : 0.10 ms
 
 WARNING    OpenMP code is not yet well tested, and may be inaccurate. [brian2.devices.cpp_standalone.device.openmp]
-Building time     : 3.06 s
-Simulation time   : 1.28 s
+Building time     : 2.57 s
+Simulation time   : 3.29 s
 Time step         : 0.10 ms
 
 WARNING    OpenMP code is not yet well tested, and may be inaccurate. [brian2.devices.cpp_standalone.device.openmp]
-Building time     : 3.08 s
-Simulation time   : 1.32 s
+Building time     : 2.55 s
+Simulation time   : 3.39 s
 Time step         : 0.10 ms
 
 *****************************
 
 *****************************
-Testing 10 times with simple_large.py...
+Testing 10 times with complicated_small.py...
 
-Building time     : 15.72 s
-Simulation time   : 19.85 s
-Time step         : 0.10 ms
+Building time     : 3.30 s
+Simulation time   : 8.36 s
+Time step         : 0.05 ms
 
-Building time     : 3.16 s
-Simulation time   : 0.71 s
-Time step         : 0.10 ms
+Building time     : 3.30 s
+Simulation time   : 8.36 s
+Time step         : 0.05 ms
 
-Building time     : 3.16 s
-Simulation time   : 0.71 s
-Time step         : 0.10 ms
+Building time     : 3.30 s
+Simulation time   : 8.36 s
+Time step         : 0.05 ms
 
-Building time     : 3.13 s
-Simulation time   : 0.70 s
-Time step         : 0.10 ms
+Building time     : 3.30 s
+Simulation time   : 8.34 s
+Time step         : 0.05 ms
 
-Building time     : 3.11 s
-Simulation time   : 0.71 s
-Time step         : 0.10 ms
+Building time     : 3.27 s
+Simulation time   : 8.33 s
+Time step         : 0.05 ms
 
-Building time     : 3.17 s
-Simulation time   : 0.70 s
-Time step         : 0.10 ms
+Building time     : 3.29 s
+Simulation time   : 8.33 s
+Time step         : 0.05 ms
 
-Building time     : 3.18 s
-Simulation time   : 0.70 s
-Time step         : 0.10 ms
+Building time     : 3.26 s
+Simulation time   : 8.33 s
+Time step         : 0.05 ms
 
-Building time     : 3.18 s
-Simulation time   : 0.69 s
-Time step         : 0.10 ms
+Building time     : 3.26 s
+Simulation time   : 8.31 s
+Time step         : 0.05 ms
 
-Building time     : 3.14 s
-Simulation time   : 0.71 s
-Time step         : 0.10 ms
+Building time     : 3.28 s
+Simulation time   : 8.26 s
+Time step         : 0.05 ms
 
-Building time     : 3.15 s
-Simulation time   : 0.70 s
-Time step         : 0.10 ms
+Building time     : 3.25 s
+Simulation time   : 8.30 s
+Time step         : 0.05 ms
+
+*****************************
+
+*****************************
+Testing 10 times with complicated_small_omp.py...
+
+WARNING    OpenMP code is not yet well tested, and may be inaccurate. [brian2.devices.cpp_standalone.device.openmp]
+Building time     : 0.08 s
+Simulation time   : 1.84 s
+Time step         : 0.05 ms
+
+WARNING    OpenMP code is not yet well tested, and may be inaccurate. [brian2.devices.cpp_standalone.device.openmp]
+Building time     : 0.08 s
+Simulation time   : 1.91 s
+Time step         : 0.05 ms
+
+WARNING    OpenMP code is not yet well tested, and may be inaccurate. [brian2.devices.cpp_standalone.device.openmp]
+Building time     : 0.08 s
+Simulation time   : 1.87 s
+Time step         : 0.05 ms
+
+WARNING    OpenMP code is not yet well tested, and may be inaccurate. [brian2.devices.cpp_standalone.device.openmp]
+Building time     : 0.08 s
+Simulation time   : 1.86 s
+Time step         : 0.05 ms
+
+WARNING    OpenMP code is not yet well tested, and may be inaccurate. [brian2.devices.cpp_standalone.device.openmp]
+Building time     : 0.08 s
+Simulation time   : 1.88 s
+Time step         : 0.05 ms
+
+WARNING    OpenMP code is not yet well tested, and may be inaccurate. [brian2.devices.cpp_standalone.device.openmp]
+Building time     : 0.08 s
+Simulation time   : 1.88 s
+Time step         : 0.05 ms
+
+WARNING    OpenMP code is not yet well tested, and may be inaccurate. [brian2.devices.cpp_standalone.device.openmp]
+Building time     : 0.08 s
+Simulation time   : 1.87 s
+Time step         : 0.05 ms
+
+WARNING    OpenMP code is not yet well tested, and may be inaccurate. [brian2.devices.cpp_standalone.device.openmp]
+Building time     : 0.08 s
+Simulation time   : 1.91 s
+Time step         : 0.05 ms
+
+WARNING    OpenMP code is not yet well tested, and may be inaccurate. [brian2.devices.cpp_standalone.device.openmp]
+Building time     : 0.08 s
+Simulation time   : 1.85 s
+Time step         : 0.05 ms
+
+WARNING    OpenMP code is not yet well tested, and may be inaccurate. [brian2.devices.cpp_standalone.device.openmp]
+Building time     : 0.08 s
+Simulation time   : 1.89 s
+Time step         : 0.05 ms
 
 *****************************

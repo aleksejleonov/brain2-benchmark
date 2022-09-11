@@ -23,24 +23,24 @@ Brian-2 benchmarks are taken from the [ModelDB record #222725](https://senselab.
 
 ## Hardware platforms
 
-1. MacBook Pro 13" M1 (2020, 16GB RAM)
-  - M1
-    - 8 cores (4 performance, 4 efficient)
-    - CPU TDP 15W (?)
-  - VM, Docker for Mac 4.12.0, configured to 8 Cores, 8GB RAM, `virtualization.framework`
-  - macOS Monterey 12.5.1
-2. MacBook Pro 14" M1 Max 10CPU 32GPU (2021, 64GB RAM)
+1. MacBook Pro 14" M1 Max 10CPU 32GPU (2021, 64GB RAM)
   - M1 Max
     - 10 cores (8 performance, 2 efficient)
-    - CPU TDP ~30W (?)
+    - CPU TDP ~30W
   - VM, Docker for Mac 4.12.0, configured to 10 Cores, 16GB RAM, `virtualization.framework`
   - macOS Monterey 12.5.1
-3. MacBook Air M2 8CPU 10GPU (2022, 24GB RAM)
+2. MacBook Air M2 8CPU 10GPU (2022, 24GB RAM)
   - M2
     - 8 cores (4 performance, 4 efficient)
-    - CPU TDP 15W (?), passive cooling
+    - CPU TDP ~15W, passive cooling
   - VM, Docker for Mac 4.12.0, configured to 8 Cores, 8GB RAM, `virtualization.framework`
   - macOS Monterey 12.5.1
+3.  FrameWork i7-1165G7 (2021, 64GB RAM)
+  - 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz
+    - 4 cores / 8 threads
+    - CPU TDP Turbo 60W
+  - Docker version 20.10.14, build a224086
+  - Pop!_OS 22.04 LTS
 
 ## Tests
 
@@ -52,61 +52,59 @@ Brian-2 benchmarks are taken from the [ModelDB record #222725](https://senselab.
 ### Single thread performance
 
 Test #1, 10 times: simple_large.py
-Task | m1 | m1_max | m2
+Task | i7-1165G7 | m1_max | m2
 :- | -: | -: | -:
-Building time<br>Simulation time | `16.00 s`<br>`20.17 s` | `15.72 s`<br>`19.85 s` | `13.56 s`<br>`17.34 s`
-Building time<br>Simulation time | `3.45 s`<br>`0.71 s` | `3.16 s`<br>`0.71 s` | `2.50 s`<br>`0.56 s`
-Building time<br>Simulation time | `3.14 s`<br>`0.70 s` | `3.16 s`<br>`0.71 s` | `2.44 s`<br>`0.56 s`
-Building time<br>Simulation time | `3.23 s`<br>`0.73 s` | `3.13 s`<br>`0.70 s` | `2.54 s`<br>`0.57 s`
-Building time<br>Simulation time | `3.15 s`<br>`0.72 s` | `3.11 s`<br>`0.71 s` | `2.55 s`<br>`0.56 s`
-Building time<br>Simulation time | `3.15 s`<br>`0.73 s` | `3.17 s`<br>`0.70 s` | `2.47 s`<br>`0.55 s`
-Building time<br>Simulation time | `3.15 s`<br>`0.72 s` | `3.18 s`<br>`0.70 s` | `2.55 s`<br>`0.56 s`
-Building time<br>Simulation time | `3.16 s`<br>`0.72 s` | `3.18 s`<br>`0.69 s` | `2.55 s`<br>`0.56 s`
-Building time<br>Simulation time | `3.14 s`<br>`0.74 s` | `3.14 s`<br>`0.71 s` | `2.56 s`<br>`0.56 s`
-Building time<br>Simulation time | `3.14 s`<br>`0.73 s` | `3.15 s`<br>`0.70 s` | `2.55 s`<br>`0.56 s`
-
+Building time<br>Simulation time | `19.72 s`<br>`25.52 s` | `17.42 s`<br>`22.58 s` | `15.82 s`<br>`20.49 s`
+Building time<br>Simulation time | `19.94 s`<br>`26.18 s` | `17.38 s`<br>`22.56 s` | `15.86 s`<br>`20.48 s`
+Building time<br>Simulation time | `22.16 s`<br>`28.13 s` | `17.42 s`<br>`22.60 s` | `15.81 s`<br>`20.44 s`
+Building time<br>Simulation time | `22.01 s`<br>`27.94 s` | `17.43 s`<br>`22.59 s` | `15.86 s`<br>`20.48 s`
+Building time<br>Simulation time | `21.96 s`<br>`27.96 s` | `17.49 s`<br>`22.62 s` | `15.84 s`<br>`20.46 s`
+Building time<br>Simulation time | `21.94 s`<br>`27.92 s` | `17.53 s`<br>`22.67 s` | `15.84 s`<br>`20.52 s`
+Building time<br>Simulation time | `22.04 s`<br>`27.93 s` | `17.56 s`<br>`22.71 s` | `15.80 s`<br>`20.42 s`
+Building time<br>Simulation time | `22.03 s`<br>`27.87 s` | `17.59 s`<br>`23.07 s` | `15.89 s`<br>`20.58 s`
+Building time<br>Simulation time | `22.01 s`<br>`27.89 s` | `17.80 s`<br>`23.17 s` | `15.85 s`<br>`20.55 s`
+Building time<br>Simulation time | `22.00 s`<br>`27.90 s` | `17.78 s`<br>`22.87 s` | `15.86 s`<br>`20.53 s`
 
 Test #2, 10 times: complicated_small.py
-Task | m1 | m1_max | m2
+Task | i7-1165G7 | m1_max | m2
 :- | -: | -: | -:
-Building time<br>Simulation time | `3.53 s`<br>`8.68 s` | `3.47 s`<br>`8.61 s` | `3.06 s`<br>`7.56 s`
-Building time<br>Simulation time | `0.15 s`<br>`1.02 s` | `0.15 s`<br>`1.01 s` | `0.13 s`<br>`0.89 s`
-Building time<br>Simulation time | `0.15 s`<br>`1.01 s` | `0.15 s`<br>`1.01 s` | `0.13 s`<br>`0.90 s`
-Building time<br>Simulation time | `0.15 s`<br>`1.01 s` | `0.15 s`<br>`1.01 s` | `0.13 s`<br>`0.90 s`
-Building time<br>Simulation time | `0.15 s`<br>`1.02 s` | `0.15 s`<br>`1.01 s` | `0.13 s`<br>`0.90 s`
-Building time<br>Simulation time | `0.15 s`<br>`1.02 s` | `0.15 s`<br>`1.02 s` | `0.13 s`<br>`0.89 s`
-Building time<br>Simulation time | `0.15 s`<br>`1.01 s` | `0.15 s`<br>`1.01 s` | `0.13 s`<br>`0.89 s`
-Building time<br>Simulation time | `0.15 s`<br>`1.00 s` | `0.15 s`<br>`1.02 s` | `0.13 s`<br>`0.90 s`
-Building time<br>Simulation time | `0.15 s`<br>`1.00 s` | `0.15 s`<br>`1.00 s` | `0.13 s`<br>`0.89 s`
-Building time<br>Simulation time | `0.15 s`<br>`1.01 s` | `0.15 s`<br>`1.01 s` | `0.13 s`<br>`0.90 s`
+Building time<br>Simulation time | `4.62 s`<br>`10.32 s` | `3.30 s`<br>`8.36 s` | `2.95 s`<br>`7.53 s`
+Building time<br>Simulation time | `4.04 s`<br>`10.45 s` | `3.30 s`<br>`8.36 s` | `2.95 s`<br>`7.51 s`
+Building time<br>Simulation time | `4.04 s`<br>`10.48 s` | `3.30 s`<br>`8.36 s` | `2.97 s`<br>`7.63 s`
+Building time<br>Simulation time | `4.03 s`<br>`10.50 s` | `3.30 s`<br>`8.34 s` | `2.97 s`<br>`7.53 s`
+Building time<br>Simulation time | `4.04 s`<br>`10.53 s` | `3.27 s`<br>`8.33 s` | `2.96 s`<br>`7.60 s`
+Building time<br>Simulation time | `4.04 s`<br>`10.51 s` | `3.29 s`<br>`8.33 s` | `2.96 s`<br>`7.53 s`
+Building time<br>Simulation time | `4.02 s`<br>`10.53 s` | `3.26 s`<br>`8.33 s` | `2.97 s`<br>`7.55 s`
+Building time<br>Simulation time | `4.04 s`<br>`10.54 s` | `3.26 s`<br>`8.31 s` | `2.96 s`<br>`7.54 s`
+Building time<br>Simulation time | `4.03 s`<br>`10.56 s` | `3.28 s`<br>`8.26 s` | `2.96 s`<br>`7.53 s`
+Building time<br>Simulation time | `4.05 s`<br>`10.51 s` | `3.25 s`<br>`8.30 s` | `2.96 s`<br>`7.54 s`
 
 ### Multithread tests in OpenMP standalone mode
 
 Test #1, 10 times : simple_large_omp.py
-Task | m1 | m1_max | m2
+Task | i7-1165G7 | m1_max | m2
 :- | -: | -: | -:
-Building time<br>Simulation time | `3.04 s`<br>`4.29 s` | `3.06 s`<br>`3.44 s` | `2.45 s`<br>`3.57 s`
-Building time<br>Simulation time | `3.10 s`<br>`1.09 s` | `3.02 s`<br>`1.25 s` | `2.47 s`<br>`1.10 s`
-Building time<br>Simulation time | `3.06 s`<br>`1.12 s` | `3.05 s`<br>`1.27 s` | `2.43 s`<br>`1.01 s`
-Building time<br>Simulation time | `3.16 s`<br>`2.47 s` | `3.09 s`<br>`1.27 s` | `2.45 s`<br>`1.02 s`
-Building time<br>Simulation time | `3.07 s`<br>`1.16 s` | `3.09 s`<br>`1.28 s` | `2.46 s`<br>`1.04 s`
-Building time<br>Simulation time | `3.07 s`<br>`1.11 s` | `3.07 s`<br>`1.25 s` | `2.46 s`<br>`1.00 s`
-Building time<br>Simulation time | `3.10 s`<br>`1.09 s` | `3.06 s`<br>`1.27 s` | `2.35 s`<br>`0.96 s`
-Building time<br>Simulation time | `3.09 s`<br>`1.09 s` | `3.06 s`<br>`1.24 s` | `2.46 s`<br>`0.97 s`
-Building time<br>Simulation time | `3.06 s`<br>`1.12 s` | `3.06 s`<br>`1.28 s` | `2.45 s`<br>`0.98 s`
-Building time<br>Simulation time | `3.08 s`<br>`1.12 s` | `3.08 s`<br>`1.32 s` | `2.41 s`<br>`0.98 s`
-
+Building time<br>Simulation time | `3.58 s`<br>`5.99 s` | `2.58 s`<br>`3.27 s` | `2.27 s`<br>`3.53 s`
+Building time<br>Simulation time | `4.42 s`<br>`5.96 s` | `2.55 s`<br>`3.38 s` | `2.26 s`<br>`3.25 s`
+Building time<br>Simulation time | `4.17 s`<br>`5.90 s` | `2.56 s`<br>`3.49 s` | `2.25 s`<br>`3.37 s`
+Building time<br>Simulation time | `4.18 s`<br>`5.97 s` | `2.57 s`<br>`3.34 s` | `2.31 s`<br>`3.24 s`
+Building time<br>Simulation time | `4.15 s`<br>`6.09 s` | `2.54 s`<br>`3.29 s` | `2.26 s`<br>`3.35 s`
+Building time<br>Simulation time | `4.07 s`<br>`5.93 s` | `2.56 s`<br>`3.30 s` | `2.30 s`<br>`3.46 s`
+Building time<br>Simulation time | `4.22 s`<br>`5.98 s` | `2.57 s`<br>`3.26 s` | `2.25 s`<br>`3.30 s`
+Building time<br>Simulation time | `4.14 s`<br>`5.99 s` | `2.57 s`<br>`3.32 s` | `2.27 s`<br>`3.25 s`
+Building time<br>Simulation time | `4.14 s`<br>`6.04 s` | `2.57 s`<br>`3.29 s` | `2.27 s`<br>`3.34 s`
+Building time<br>Simulation time | `4.12 s`<br>`5.96 s` | `2.55 s`<br>`3.39 s` | `2.27 s`<br>`3.25 s`
 
 Test #2, 10 times: complicated_small_omp.py
-Task | m1 | m1_max | m2
+Task | i7-1165G7 | m1_max | m2
 :- | -: | -: | -:
-Building time<br>Simulation time | `0.08 s`<br>`2.39 s` | `0.08 s`<br>`1.92 s` | `0.08 s`<br>`1.93 s`
-Building time<br>Simulation time | `0.08 s`<br>`0.93 s` | `0.08 s`<br>`0.91 s` | `0.07 s`<br>`0.80 s`
-Building time<br>Simulation time | `0.08 s`<br>`0.92 s` | `0.08 s`<br>`0.92 s` | `0.07 s`<br>`0.94 s`
-Building time<br>Simulation time | `0.08 s`<br>`0.93 s` | `0.08 s`<br>`0.92 s` | `0.07 s`<br>`0.78 s`
-Building time<br>Simulation time | `0.08 s`<br>`0.93 s` | `0.08 s`<br>`0.92 s` | `0.07 s`<br>`0.84 s`
-Building time<br>Simulation time | `0.08 s`<br>`0.94 s` | `0.08 s`<br>`0.93 s` | `0.07 s`<br>`0.79 s`
-Building time<br>Simulation time | `0.08 s`<br>`0.90 s` | `0.08 s`<br>`0.93 s` | `0.07 s`<br>`0.83 s`
-Building time<br>Simulation time | `0.08 s`<br>`0.91 s` | `0.08 s`<br>`0.93 s` | `0.08 s`<br>`0.80 s`
-Building time<br>Simulation time | `0.08 s`<br>`0.93 s` | `0.08 s`<br>`0.93 s` | `0.07 s`<br>`0.82 s`
-Building time<br>Simulation time | `0.08 s`<br>`0.93 s` | `0.08 s`<br>`0.93 s` | `0.07 s`<br>`0.79 s`
+Building time<br>Simulation time | `0.12 s`<br>`3.41 s` | `0.08 s`<br>`1.84 s` | `0.07 s`<br>`1.88 s`
+Building time<br>Simulation time | `0.17 s`<br>`3.65 s` | `0.08 s`<br>`1.91 s` | `0.07 s`<br>`1.89 s`
+Building time<br>Simulation time | `0.17 s`<br>`3.65 s` | `0.08 s`<br>`1.87 s` | `0.07 s`<br>`1.88 s`
+Building time<br>Simulation time | `0.17 s`<br>`3.58 s` | `0.08 s`<br>`1.86 s` | `0.07 s`<br>`1.85 s`
+Building time<br>Simulation time | `0.17 s`<br>`3.56 s` | `0.08 s`<br>`1.88 s` | `0.07 s`<br>`1.84 s`
+Building time<br>Simulation time | `0.17 s`<br>`3.55 s` | `0.08 s`<br>`1.88 s` | `0.07 s`<br>`1.88 s`
+Building time<br>Simulation time | `0.17 s`<br>`3.59 s` | `0.08 s`<br>`1.87 s` | `0.07 s`<br>`1.85 s`
+Building time<br>Simulation time | `0.17 s`<br>`3.54 s` | `0.08 s`<br>`1.91 s` | `0.07 s`<br>`1.88 s`
+Building time<br>Simulation time | `0.17 s`<br>`3.55 s` | `0.08 s`<br>`1.85 s` | `0.07 s`<br>`1.85 s`
+Building time<br>Simulation time | `0.18 s`<br>`3.60 s` | `0.08 s`<br>`1.89 s` | `0.07 s`<br>`1.85 s`
