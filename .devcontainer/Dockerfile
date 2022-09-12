@@ -22,4 +22,6 @@ RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/
 
 # Install poetry package manager
 RUN export DEBIAN_FRONTEND=noninteractive \
-    && su vscode -c "curl -sSL https://install.python-poetry.org | python3 -"
+    && pip3 --disable-pip-version-check --no-cache-dir install poetry \
+    && poetry config virtualenvs.create false \
+    && su vscode -c "poetry config virtualenvs.create false"

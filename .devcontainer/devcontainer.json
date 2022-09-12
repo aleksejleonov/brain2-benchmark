@@ -25,7 +25,10 @@
 				"python.linting.pylintEnabled": true,
 				"python.formatting.provider": "black",
 				"python.analysis.typeCheckingMode": "basic",
-				"python.terminal.activateEnvInCurrentTerminal": true,
+				// Python path
+				"python.defaultInterpreterPath": "/usr/local/bin/python",
+				"python.formatting.blackPath": "/usr/local/bin/black",
+				"python.linting.pylintPath": "/usr/local/bin/pylint",
 				// Auto-correct Python code on save.
 				"[python]": {
 					"editor.formatOnSave": true
@@ -45,12 +48,12 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "poetry config virtualenvs.in-project true && poetry install",
+	"postCreateCommand": "sudo poetry install",
 
   // A command string or list of command arguments to run when the container starts (in all cases).
   // The parameters behave exactly like postCreateCommand, but the commands execute on start rather
   // than create. Not set by default.
-  "postStartCommand": "poetry install && poetry run pre-commit install",
+  "postStartCommand": "sudo poetry install && pre-commit install",
 
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "vscode",
